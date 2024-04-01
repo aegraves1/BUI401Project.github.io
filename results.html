@@ -1,0 +1,120 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .results {
+            margin-bottom: 20px;
+        }
+
+        .results h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .results p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .results h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .results ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .results li {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resultsContainer">
+
+    </div>
+
+
+    <button onclick="goHome()">Go Home</button>
+
+    <script>
+        // Retrieve quiz results from localStorage
+        const quizResults = JSON.parse(localStorage.getItem('quizResults'));
+
+        // Display results
+        const resultsContainer = document.getElementById('resultsContainer');
+        if (quizResults && quizResults.incorrectQuestions) {
+            resultsContainer.innerHTML = `
+                <h2>How'd You Do?:</h2>
+                <p>${quizResults.numCorrect} out of ${quizResults.totalQuestions} correct</p>
+                <h3>Incorrect Answers:</h3>
+                <ul>
+                    ${quizResults.incorrectQuestions.map(question => `
+                        <li>
+                            <strong>Question:</strong> ${question.question}<br>
+                            <strong>Your Answer:</strong> ${question.incorrectAnswer}<br>
+                            <strong>Explanation:</strong> ${question.explanation}
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+        } else {
+            resultsContainer.textContent = "No quiz results found.";
+        }
+
+        // Clear quiz results from localStorage
+        localStorage.removeItem('quizResults');
+
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

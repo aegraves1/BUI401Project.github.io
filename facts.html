@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Fun Facts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html,
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #1f2833;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            color: #66fcf1;
+            margin-top: 20px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .infographic {
+            margin-top: 20px;
+            height: auto;
+            max-width: 100%;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            ul {
+                width: 50%;
+            }
+
+            .infographic {
+                width: 50%;
+                margin-top: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="phishing.html">Going Phishing</a>
+                <a href="password.html">Password Cracker</a>
+                <a href="scamFront.html">Spot the Scam</a>
+                <a href="games.html">All Games</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" class="active">Trivia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="facts.html" class="active">Did you know?</a>
+                <a href="worst_case.html">What's the Worst that Could Happen?</a>
+                <a href="socialMedia.html">What Not to Post</a>
+                <a href="whattodo.html">Hacked?</a>
+            </div>
+        </div>
+        <a href="resources.html">Resources</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+<h2>Did you know ...</h2>
+
+
+<div id="container">
+    <ul>
+        <li>A cyber attack happens every 39 seconds?</li>
+        <li>98% of cyber attacks involve tricks or manipulation</li>
+        <li>3.4 billion malicious emails are sent every day</li>
+        <li>Romance scam text messages cost people in the US $33.7 million</li>
+    </ul>
+    <img class="infographic" src="textData.jpg" alt="Infographic">
+</div>
+
+
+</html>

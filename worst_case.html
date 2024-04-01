@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Worst Case</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html,
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #1f2833;
+        }
+
+        h1 {
+            color: #66fcf1;
+            text-align: center;
+        }
+
+        h4 {
+            color: white;
+            text-align: center;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .worst {
+            color: white;
+        }
+
+        .worst {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .worst li {
+            margin-bottom: 20px;
+        }
+
+        .worst button {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .worst button:hover {
+            background-color: #2980B9;
+        }
+
+        .worst img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .worst p {
+            text-align: center;
+            color: white;
+        }
+
+        /* Hide all outcome divs by default */
+        .outcome {
+            display: none;
+        }
+
+        /* Dropdown Button */
+        .dropBtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropBtn:hover,
+        .dropBtn:focus {
+            background-color: #2980B9;
+        }
+
+        #media {
+            display: none;
+        }
+
+        #ssn {
+            display: none;
+        }
+
+        #cred {
+            display: none;
+        }
+
+        #phone {
+            display: none;
+        }
+
+        #click {
+            display: none;
+        }
+
+        #bank {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="phishing.html">Going Phishing</a>
+                <a href="password.html">Password Cracker</a>
+                <a href="scamFront.html">Spot the Scam</a>
+                <a href="games.html">All Games</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Trivia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="facts.html">Did you know?</a>
+                <a href="worst_case.html" class="active">What's the Worst that Could Happen?</a>
+                <a href="socialMedia.html">What Not to Post</a>
+                <a href="whattodo.html">Hacked?</a>
+            </div>
+        </div>
+        <a href="resources.html">Resources</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function myFunction1() {
+            var x = document.getElementById("media");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction2() {
+            var x = document.getElementById("ssn");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction3() {
+            var x = document.getElementById("cred");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction4() {
+            var x = document.getElementById("phone");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction5() {
+            var x = document.getElementById("click");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction6() {
+            var x = document.getElementById("bank");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
+
+    <h1>What's the Worst That Could Happen?</h1>
+
+    <h4>Click on the scenario to see the outcome</h4>
+
+    <!---- embarassing to life threatening -->
+
+    <div class="worst">
+
+        <ul>
+            <li> <button id="mediaBtn" onClick="myFunction1()">Someone gets access to your social media account</button>
+            </li>
+
+            <div id="media">
+                <img src="instaHack.jpg">
+                <p>They get access to all your pictures or post something embarassing or inappropriate</p>
+            </div>
+
+            <li><button id="ssnBtn" onclick="myFunction2()">Your Social Security Number is Stolen</button></li>
+            <div id="ssn">
+                <img src="taxFraud.jpg">
+                <p>Someone commits tax fraud in your name</p>
+            </div>
+
+            <li><button id="credBtn" onclick="myFunction3()">Your credentials are Stolen</button></li>
+
+            <div id="cred">
+                <img src="creditFraud.jpg">
+                <p>Someone takes out a credit card in your name, hurting your credit score</p>
+            </div>
+
+            <li><button id="phoneBtn" onclick="myFunction4()">Someone clones your phone's sim card</button></li>
+
+            <div id="phone">
+                <img src="simHack.jpg">
+                <p>Someone gains access to everything on your phone and commits identity fraud</p>
+            </div>
+
+            <li><button id="clickBtn" onclick="myFunction5()">You click on an unknown file</button></li>
+
+            <div id="click">
+                <img src="blueScreen.jpg">
+                <p>Blue screen of death, all your files are gone</p>
+            </div>
+
+
+            <li><button id="bankBtn" onclick="myFunction6()">You click on a link in a suspicious email</button></li>
+
+            <div id="bank">
+                <img src="bankTheft.jpg">
+                <p>Your username and password for your bank is stolen</p>
+            </div>
+        </ul>
+
+
+</body>
+
+
+</html>

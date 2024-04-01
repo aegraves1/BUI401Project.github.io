@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Games</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html,
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #1f2833;
+        }
+
+        /* .apps {
+            background-image: linear-gradient(#5433FF, #20BDFF, #A5FECB);
+        } */
+
+        .password {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+
+        .phishing {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .scam {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .btn {
+            background-color: white;
+            font-size: large;
+            padding: 0%;
+        }
+
+        .apps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .apps .app {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .app img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+
+        .app p {
+            margin: 0;
+            color: white;
+        }
+
+        .app button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .app button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="phishing.html">Going Phishing</a>
+                <a href="password.html">Password Cracker</a>
+                <a href="scamFront.html">Spot the Scam</a>
+                <a href="games.html" class="active">All Games</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Trivia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="facts.html">Did you know?</a>
+                <a href="worst_case.html">What's the Worst that Could Happen?</a>
+                <a href="socialMedia.html">What Not to Post</a>
+                <a href="whattodo.html">Hacked?</a>
+            </div>
+        </div>
+        <a href="resources.html">Resources</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div class="apps">
+
+        <div class="app">
+            <div class="password">
+                <a href="password.html">
+                    <button class="btn">
+
+                        <img src="Password.png" border="0" style="width:auto;height:90px" />
+                        <p>P@$$word Cracker</p>
+
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="app">
+            <div class="phishing">
+                <a href="phishing.html">
+
+                    <button class="btn">
+                        <img src="goingPhishing.png" border="0" style="width:auto;height:120px" />
+                        <p>Going Phishing</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="app">
+            <div class="scam">
+                <a href="scamFront.html">
+                    <button class="btn">
+                        <img src="spotTheScam.png" border="0" style="width:auto;height:120px" />
+                        <p>Spot the Scam</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

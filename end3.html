@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #1f2833;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .flex-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #finalScore {
+            font-size: 5rem;
+            color: #4CAF50;
+            margin-bottom: 2rem;
+        }
+
+        .end-form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        input {
+            width: 20rem;
+            height: 3rem;
+            font-size: 1.6rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        input::placeholder {
+            color: grey;
+        }
+
+        #saveScoreBtn {
+            width: 20rem;
+            height: 3rem;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        #saveScoreBtn:hover {
+            background-color: #45a049;
+        }
+
+        .btn {
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .fa-home {
+            margin-left: 0.5rem;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="end" class="flex-center">
+            <h1>Your Score</h1>
+            <h2 id="finalScore">0</h2>
+            <form class="end-form-container">
+                <h2>Enter your name to save your score</h2>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
+            </form>
+            <a href="passwordCrack.html" class="btn">Play Again</a>
+            <a href="index.html" class="btn">Go Home<i class="fas fa-home"></i></a>
+        </div>
+    </div>
+    <script src="end3.js"></script>
+</body>
+
+</html>

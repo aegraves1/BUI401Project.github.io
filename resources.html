@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Resources</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html,
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #1f2833;
+            color: white;
+        }
+
+        .section {
+            padding: 50px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        #websites {
+            background-color: #0b4f6c;
+        }
+
+        #phishing {
+            background-color: #4a47a3;
+        }
+
+        #hash {
+            background-color: #0f4c5c;
+        }
+
+        #malware {
+            background-color: #2a9d8f;
+        }
+
+        h1 {
+            color: #66fcf1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        #websites a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        #websites a:hover {
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="phishing.html">Going Phishing</a>
+                <a href="password.html">Password Cracker</a>
+                <a href="scamFront.html">Spot the Scam</a>
+                <a href="games.html">All Games</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Trivia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="facts.html">Did you know?</a>
+                <a href="worst_case.html">What's the Worst that Could Happen?</a>
+                <a href="socialMedia.html">What Not to Post</a>
+                <a href="whattodo.html">Hacked?</a>
+            </div>
+        </div>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id="websites" class="section">
+        <h1>Some Fun Websites to Check Out</h1>
+
+        <p>Is your password really secure? Test it's strength <a
+                href="https://www.security.org/how-secure-is-my-password/" target="_blank">HERE</a> (Don't use your
+            actual password!)
+        </p>
+
+        <p>Want to Learn More about Encryption?
+            <a href="https://cryptii.com/" target="_blank">Click Here</a> to go to Cryptii.com and look at the various
+            methods of
+            encryption
+
+        <p>Try to decrypt this message: Unir sha yrneavat!</p>
+        </p>
+
+    </div>
+
+    <div id="phishing" class="section">
+        <h1>Want to Learn More about Phishing Schemes?</h1>
+
+        <p>Phishing Schemes use Social Engineering tactics to get the user to click on the file/link/or whatever is
+            attached</p>
+        <p>These tactics include: </p>
+        <ul>
+            <li>Authority: Someone in charge</li>
+            <li>Intimidation: Something BAD will happen if you don't comply</li>
+            <li>Concensus/Social Proof: What is normally expected, this happened before so its ok</li>
+            <li>Scarcity: something is going to run out or time out. Click Now! Don't Think</li>
+            <li>Urgency: this needs to happen NOW</li>
+            <li>Familiarity: A known website or application or person contacts you</li>
+            <li>Trust: Someone who is safe. From IT or customer service</li>
+        </ul>
+    </div>
+
+
+
+    <div id="hash" class="section">
+        <h1>How do websites keep your passwords secure?</h1>
+
+
+        <p>Websites with good security will store your password as a hash</p>
+        <p>Hashing is when a mathematical operation is used to scramble data so that it cannot be read by someone if it
+            is
+            intercepted.
+            It also cannot be reversed without knowing the hasing algorithm used.</p>
+        <p>There are several hashing algorithms but some are more secure than others.</p>
+        <p>An example of this is:
+        <ul>
+            <li>Plaintext: Password1</li>
+            <li>Hashed in MD5: 2ac9cb7dc02b3c0083eb70898e549b63</li>
+            <li>Hashed in SHA1: 70ccd9007338d6d81dd3b6271621b9cf9a97ea00</li>
+            <li>Hashed in SHA256: 19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd</li>
+            <li>Hashed in SHA512:
+                cbe0cd68cbca3868250c0ba545c48032f43eb0e8a5e6bab603d109251486f77a91e46a3146d887e37416c6bdb6cbe701bd514de778573c9b0068483c1c626aec
+            </li>
+        </ul>
+        </p>
+    </div>
+
+    <div id="malware" class="section">
+        <h1>What types of malware are there and how are they different?</h1>
+
+        <p>There are several kinds of malware: </p>
+        <ul>
+            <li>Viruses: a virus can reproduce itself but it needs you to run a program</li>
+            <li>Worms: a worm is self-replicating</li>
+            <li>Ransomware: encrypt your files and ask for money to give them back</li>
+            <li>Trojans: looks like a harmless or even beneficial thing and turns out to be malicious</li>
+            <li>Spyware: malware that spies on you</li>
+            <li>Keylogger: tracks and records keystrokes</li>
+            <li>Logic Bomb: installed by a disgruntled employee to execute at a certain time</li>
+            <li>Botnet: a group of bots working together, could orchestrate a Distributed Denial of Service attack</li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+
+</html>

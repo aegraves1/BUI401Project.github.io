@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #1f2833;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .flex-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            font-size: 2.4rem;
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #45a049 0%, #4CAF50 100%);
+        }
+
+        .gameBtn {
+            font-size: 2.4rem;
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(90deg, #1269ff 0%, #0066ff 100%);
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .gameBtn:hover {
+            background: linear-gradient(90deg, #0066ff 0%, #1269ff 100%);
+        }
+
+        .fa-home {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="highScores3" class="flex-center">
+            <h1>Leaderboard</h1>
+            <ul id="highScoresList"></ul>
+            <a href="index.html" class="btn"><i class="fas fa-home"></i>Go Home</a>
+            <a href="passwordCrack.html" class="gameBtn">Play Again</a>
+        </div>
+    </div>
+    <script src="highscores3.js"></script>
+</body>
+
+</html>

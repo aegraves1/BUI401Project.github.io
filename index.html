@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BUI 401 Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+        }
+
+        .button {
+            margin: 0 10px;
+            padding: 15px 25px;
+            font-size: 20px;
+            outline: none;
+            color: #ffffff;
+            background-color: #45a29e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #191970;
+        }
+
+        .facts-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .factoid {
+            margin-top: 20px;
+        }
+
+        .factoid h3 {
+            color: #66fcf1;
+            margin-bottom: 10px;
+        }
+
+        .factoid p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: white;
+        }
+
+        #trivia {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #191970;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        #trivia span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        #trivia:hover span {
+            padding-right: 25px;
+        }
+
+        #trivia span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        #trivia:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        ul.factoid li {
+            display: block;
+            color: white;
+            text-align: center;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        #trivia a {
+            display: inline-block;
+            color: #CCCCCC;
+            background-color: #191970;
+            padding: 15px 13px;
+            text-decoration: none;
+        }
+
+        /*when page is mobile size, buttons go to center */
+        @media screen and (max-width: 600px) {
+
+            .gamebutton {
+                text-align: center;
+            }
+
+            .button2 {
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Games
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="phishing.html">Going Phishing</a>
+                <a href="password.html">Password Cracker</a>
+                <a href="scamFront.html">Spot the Scam</a>
+                <a href="games.html">All Games</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Trivia
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="facts.html">Did you know?</a>
+                <a href="worst_case.html">What's the Worst that Could Happen?</a>
+                <a href="socialMedia.html">What Not to Post</a>
+                <a href="whattodo.html">Hacked?</a>
+            </div>
+        </div>
+        <a href="resources.html">Resources</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <h2>Welcome to my BUI 401 Project!</h2>
+
+    <div class="button-container">
+        <a href="test.html" class="button">Test Your Knowledge</a>
+        <a href="games.html" class="button">Play Games</a>
+    </div>
+
+    <div class="facts-container">
+        <div class="factoid">
+            <h3>Cyber security fact of the Month:</h3>
+            <p>Did you know that a cyber attack happens every 39 seconds?</p>
+            <div id="trivia">
+                <a href="trivia.html"><span>Want to learn more? Click Here!</span></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
