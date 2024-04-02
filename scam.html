@@ -12,23 +12,25 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #1a1a1a;
-            /* Dark background color */
             color: #fff;
-            /* Text color */
             margin: 0;
             padding: 0;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .flex-column {
             display: flex;
             flex-direction: column;
+            align-items: center;
+        }
+
+        .text-center {
+            text-align: center;
         }
 
         .justify-center {
@@ -42,11 +44,26 @@
         .choice-container {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
             background-color: #2980b9;
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease-in-out;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .choice-container+.choice-container {
+            margin-top: 20px;
+        }
+
+        .choice-text {
+            padding: 20px;
+            font-size: 1.6rem;
+            color: #fff;
+            flex: 1;
         }
 
         .choice-container:hover {
@@ -97,38 +114,39 @@
             margin-bottom: 20px;
         }
 
-        .column {
-            flex: 1;
-            padding: 10px;
-        }
-
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
         }
 
         .column {
-            flex: 1;
+            flex: 1 0 50%;
             padding: 10px;
+            box-sizing: border-box;
             text-align: center;
-            /* Center the caption */
+        }
+
+        .column img {
+            width: auto;
+            max-width: 100%;
+            height: 400px;
+            max-height: 400px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 100%;
+                /* Full width on smaller screens */
+            }
         }
 
         figcaption {
             margin-top: 10px;
             font-size: 1.2rem;
             color: #fff;
-            /* Caption text color */
         }
 
-
-        img {
-            max-width: 100%;
-            /* Keep images at their original size */
-            height: auto;
-            width: 300px;
-        }
 
         .btn {
             display: inline-block;
@@ -152,6 +170,21 @@
 
         .incorrect {
             background: linear-gradient(32deg, rgba(230, 29, 29, 1)0%, rgb(224, 11, 11)100%);
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column img {
+                height: auto;
+                max-height: 300px;
+                /* Adjusted maximum height for smaller screens */
+            }
         }
     </style>
 </head>
@@ -182,13 +215,13 @@
                 <div class="row">
                     <div class="column">
                         <figure>
-                            <img id="question-image" src="image1.jpg">
+                            <img id="question-image" src="image1.jpg" height="auto" width="300">
                             <figcaption>A</figcaption>
                         </figure>
                     </div>
                     <div class="column">
                         <figure>
-                            <img id="question-image2" src="image2.jpg">
+                            <img id="question-image2" src="image2.jpg" height="auto" width="300">
                             <figcaption>B</figcaption>
                         </figure>
                     </div>
