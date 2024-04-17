@@ -97,7 +97,7 @@
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         if (numCorrect == 10) {
-            alert('Wow you sure know your stuff!')
+            alert('Red: Follow the strings in the Basement, Yellow: Conference room(1003), Green: Upstairs Lounge, Blue: CYBER SECURITY, Purple: Find Grace!')
         }
         else if (numCorrect == 5) {
             alert('Maybe you should review your cyber security skills again...')
